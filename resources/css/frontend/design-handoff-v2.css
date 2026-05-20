@@ -1,0 +1,102 @@
+@layer base {
+    body {
+        font-family: var(--font-body);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-heading);
+        letter-spacing: -0.01em;
+    }
+}
+
+@layer components {
+    .card, .summary-card, .checkout-section-card, .admin-alert {
+        background: hsl(var(--card));
+        border: 1px solid hsl(var(--border));
+        border-radius: var(--radius-xl);
+        box-shadow: var(--shadow-card);
+    }
+
+    .btn-primary {
+        background: var(--gradient-primary);
+        border-radius: var(--radius-md);
+        color: #fff;
+        border: 1px solid transparent;
+        min-height: 40px;
+        transition: var(--transition-fast);
+    }
+
+    .btn-primary:hover {
+        box-shadow: var(--shadow-glow);
+        transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+        background: hsl(var(--secondary));
+        color: hsl(var(--foreground));
+        border-color: hsl(var(--border));
+        border-radius: var(--radius-md);
+    }
+
+    .form-input, .form-textarea, .input, input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type="url"], input[type="date"], select, textarea {
+        border: 1px solid hsl(var(--input));
+        border-radius: var(--radius-md);
+        background: hsl(var(--background));
+        color: hsl(var(--foreground));
+    }
+
+    .form-input:focus, .form-textarea:focus, .input:focus, input:focus, select:focus, textarea:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px hsla(var(--ring), .2);
+        border-color: hsl(var(--ring));
+    }
+
+    .badge, .status-badge {
+        border-radius: 9999px;
+        padding: 4px 10px;
+        font-size: 11px;
+        font-weight: 600;
+    }
+
+    .table th, table th {
+        background: hsla(var(--muted), .35);
+        color: hsl(var(--muted-foreground));
+        font-weight: 600;
+        font-size: 13px;
+    }
+
+    .table tr:hover td, table tr:hover td {
+        background: hsla(var(--muted), .2);
+    }
+}
+
+@layer utilities {
+    .link-primary {
+        color: hsl(var(--primary));
+    }
+
+    .link-primary:hover {
+        text-decoration: underline;
+    }
+
+    .text-muted {
+        color: hsl(var(--muted-foreground));
+    }
+
+    .shadow-glow {
+        box-shadow: var(--shadow-glow);
+    }
+
+    .shadow-glow-accent {
+        box-shadow: var(--shadow-glow-accent);
+    }
+
+    .bg-gradient-primary {
+        background: var(--gradient-primary);
+    }
+
+    .bg-gradient-accent {
+        background: var(--gradient-accent);
+    }
+}
+

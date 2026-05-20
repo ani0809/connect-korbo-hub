@@ -1,0 +1,12 @@
+@extends('frontend.account.layouts.app')
+@section('account-content')
+<a class="text-sm text-blue-600" href="{{ route('account.orders') }}">Back to Orders</a>
+<h1 class="text-2xl font-semibold mt-1">Order {{ $order->order_number }}</h1>
+<p class="text-sm text-gray-500 mb-4">Placed on @datetime($order->created_at)</p>
+<div class="grid md:grid-cols-[1fr_320px] gap-5">
+  <div>
+    <div class="border rounded-lg overflow-hidden"><table class="w-full text-sm"><thead class="bg-gray-50"><tr><th class="text-left p-2">Item</th><th>Qty</th><th>Price</th><th>Total</th></tr></thead><tbody>@foreach($order->items as $item)<tr class="border-t"><td class="p-2">{{ $item->product_name }}<div class="text-xs text-gray-500">{{ $item->variant_info ? json_encode($item->variant_info) : '' }}</div>@if($order->order_status==='delivered' && !$item->is_reviewed)<form method="POST" action="{{ route('account.orders.review',$item->id) }}" enctype="multipart/form-data" class="mt-2 space-y-1">@csrf<input name="rating" type="number" min="1" max="5" class="border rounded p-1 w-20" placeholder="5"><input name="title" class="border rounded p-1 w-full" placeholder="Review title"><textarea name="comment" class="border rounded p-1 w-full" placeholder="Write review"></textarea><input type="file" name="images[]" multiple><button class="border rounded px-2 py-1">Submit Review</button></form>@endif</td><td class="text-center">{{ $item->quantity }}</td><td class="text-center">{{ currency_format((float)$item->unit_price) }}</td><td class="text-center">{{ currency_format((float)$item->subtotal) }}</td></tr>@endforeach</tbody></table></div>
+  </div>
+  <aside class="border rounded-lg p-4 text-sm space-y-2"><div class="font-semibold">Summary</div><div class="flex justify-between"><span>Subtotal</span><span>{{ currency_format((float)$order->subtotal) }}</span></div><div class="flex justify-between"><span>Shipping</span><span>{{ currency_format((float)$order->shipping_cost) }}</span></div><div class="flex justify-between"><span>Tax</span><span>{{ currency_format((float)$order->tax_amount) }}</span></div><div class="flex justify-between"><span>Discount</span><span>-{{ currency_format((float)$order->coupon_discount) }}</span></div><hr><div class="flex justify-between font-semibold"><span>Total</span><span>{{ currency_format((float)$order->total) }}</span></div><a class="block text-center border rounded py-2" href="{{ route('account.orders.invoice',$order->order_number) }}">Download Invoice</a></aside>
+</div>
+@endsection

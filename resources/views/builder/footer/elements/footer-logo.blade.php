@@ -1,0 +1,1 @@
+<div class="foot-logo"><img src="{{ asset("storage/".(setting("site_logo","") ?: "")) }}" alt="logo"><p>{{ $settings["description"] ?? "" }}</p>@if(!empty($settings["show_social"]))<div class="el-social"><a href="#">Facebook</a><a href="#">Instagram</a></div>@endif</div>

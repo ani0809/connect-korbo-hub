@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyShop Mobile API v1</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 960px; margin: 2rem auto; padding: 0 1rem; line-height: 1.5; color: #1e293b; }
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.15rem; margin-top: 2rem; border-bottom: 1px solid #e2e8f0; padding-bottom: .25rem; }
+    code, pre { background: #f1f5f9; padding: .15rem .35rem; border-radius: 4px; font-size: .9rem; }
+    pre { padding: 1rem; overflow: auto; }
+    .muted { color: #64748b; font-size: .9rem; }
+  </style>
+</head>
+<body>
+  <h1>MyShop REST API <code>v1</code></h1>
+  <p class="muted">Base URL: <code>/api/v1</code> &middot; Auth: <code>Bearer</code> token (Laravel Sanctum) &middot; JSON responses</p>
+
+  <h2>Authentication</h2>
+  <ul>
+    <li><code>POST /auth/login</code> — email or phone + password</li>
+    <li><code>POST /auth/register</code></li>
+    <li><code>POST /auth/logout</code> (auth)</li>
+    <li><code>GET /auth/user</code> (auth)</li>
+    <li><code>PUT /auth/profile</code> (auth)</li>
+    <li><code>POST /auth/change-password</code> (auth)</li>
+    <li><code>POST /auth/refresh-token</code> (auth)</li>
+    <li><code>POST /auth/forgot-password</code>, <code>POST /auth/verify-otp</code>, <code>POST /auth/social-login</code></li>
+  </ul>
+
+  <h2>Catalog</h2>
+  <ul>
+    <li><code>GET /products</code>, <code>GET /products/{slug}</code></li>
+    <li><code>GET /products/{id}/reviews</code>, <code>GET /products/{id}/qna</code></li>
+    <li><code>GET /categories</code>, <code>GET /categories/{slug}</code></li>
+    <li><code>GET /brands</code>, <code>GET /search</code>, <code>GET /search/suggestions</code></li>
+    <li><code>GET /home</code>, <code>GET /banners</code>, <code>GET /flash-deals</code></li>
+    <li><code>GET /sellers</code>, <code>GET /sellers/{slug}</code></li>
+    <li><code>GET /settings</code>, <code>/countries</code>, <code>/currencies</code>, <code>/languages</code></li>
+  </ul>
+
+  <h2>Cart &amp; checkout</h2>
+  <ul>
+    <li><code>GET /cart</code>, <code>POST /cart/add</code>, <code>PUT /cart/update</code>, <code>DELETE /cart/remove/{itemId}</code>, <code>DELETE /cart/clear</code></li>
+    <li><code>POST /cart/coupon</code>, <code>DELETE /cart/coupon</code></li>
+    <li><code>POST /checkout/shipping-methods</code>, <code>POST /checkout/place-order</code>, <code>POST /checkout/payment-intent</code></li>
+  </ul>
+
+  <h2>Account</h2>
+  <ul>
+    <li><code>GET /orders</code>, <code>GET /orders/{number}</code>, cancel / reorder / review</li>
+    <li><code>GET /wishlist</code>, <code>POST /wishlist/toggle</code>, <code>GET /wishlist/ids</code></li>
+    <li><code>GET|POST|PUT|DELETE /addresses</code>, default address</li>
+    <li><code>GET /wallet</code>, <code>GET /wallet/transactions</code></li>
+    <li><code>GET /points</code>, <code>GET /points/history</code></li>
+    <li><code>GET /notifications</code>, mark read</li>
+    <li><code>GET|POST /support</code>, replies</li>
+    <li><code>POST /reviews</code>, <code>POST /qna/questions</code>, <code>POST /qna/answers</code></li>
+    <li><code>GET|POST /compare</code>, <code>GET /downloads</code>, <code>GET /downloads/{id}/link</code></li>
+    <li><code>POST /fcm/register</code>, <code>DELETE /fcm/unregister</code></li>
+  </ul>
+
+  <h2>Success response</h2>
+  <pre>{
+  "success": true,
+  "message": "Success",
+  "data": { },
+  "meta": { "current_page": 1, "per_page": 20, "total": 100, "last_page": 5, "has_more": false }
+}</pre>
+
+  <h2>Error response</h2>
+  <pre>{
+  "success": false,
+  "message": "Error description",
+  "errors": { "field": ["validation error"] },
+  "code": 422
+}</pre>
+
+  <p class="muted">Disable this page in production by removing or protecting <code>public/api-docs/</code> if desired.</p>
+</body>
+</html>

@@ -1,0 +1,1 @@
+window.MegaMenu=function(){return{active:null,activeCat:null,timer:null,open(t){clearTimeout(this.timer),this.active=t},closeAll(){this.timer=setTimeout(()=>{this.active=null,this.activeCat=null},150)}}};document.addEventListener("keydown",e=>{e.key==="Escape"&&document.querySelectorAll("[x-data]").forEach(()=>{})});

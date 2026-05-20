@@ -1,0 +1,7 @@
+@extends('frontend.account.layouts.app')
+@section('account-content')
+<div class="flex justify-between items-center mb-4"><h1 class="text-2xl font-semibold">Support Tickets</h1><button id="toggle-ticket-form" class="border rounded px-3 py-2">Create New Ticket</button></div>
+<form id="ticket-form" method="POST" action="{{ route('account.support.store') }}" enctype="multipart/form-data" class="hidden border rounded-xl p-4 mb-4 space-y-2">@csrf<input name="subject" class="border rounded p-2 w-full" placeholder="Subject"><select name="priority" class="border rounded p-2 w-full"><option value="low">Low</option><option value="medium">Medium</option><option value="high">High</option></select><textarea name="message" class="border rounded p-2 w-full" placeholder="Message"></textarea><input type="file" name="attachments[]" multiple><button class="border rounded px-3 py-2">Submit</button></form>
+<div class="space-y-3">@foreach($tickets as $ticket)<div class="border rounded-xl p-4"><div class="flex justify-between"><div class="font-medium">{{ $ticket->ticket_number }}</div><span class="text-xs px-2 py-1 rounded bg-gray-100">{{ ucfirst($ticket->status) }}</span></div><div>{{ $ticket->subject }}</div><div class="text-xs text-gray-500 mt-1">Priority: {{ ucfirst($ticket->priority) }}</div><a class="text-blue-600 text-sm" href="{{ route('account.support.show',$ticket->ticket_number) }}">View</a></div>@endforeach</div>
+<div class="mt-4">{{ $tickets->links() }}</div>
+@endsection

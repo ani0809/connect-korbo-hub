@@ -1,0 +1,1 @@
+<!doctype html><html><body style="font-family:Arial,sans-serif;background:#f8fafc;padding:20px"><div style="max-width:640px;margin:0 auto;background:#fff;border:1px solid #e2e8f0;padding:24px"><h2>Order Status Updated</h2><p>Order <strong>#{{ $order->order_number }}</strong> is now <strong>{{ ucfirst($status) }}</strong>.</p></div></body></html>

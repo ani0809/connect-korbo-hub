@@ -1,0 +1,1 @@
+@if(($settings["type"] ?? "line") === "space")<span style="display:inline-block;width:{{ $settings["height"] ?? "20px" }}"></span>@else<span style="display:inline-block;width:{{ $settings["width"] ?? "1px" }};height:{{ $settings["height"] ?? "20px" }};background:{{ $settings["color"] ?? "#cbd5e1" }}"></span>@endif

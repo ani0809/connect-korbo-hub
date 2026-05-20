@@ -1,0 +1,48 @@
+/* ══════════════════════════════════
+   ANIMATIONS
+══════════════════════════════════ */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes scaleIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+@keyframes scaleInBounce { from { opacity: 0; transform: scale(0.7); } to { opacity: 1; transform: scale(1); } }
+@keyframes slideInRight { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes pulseGlow { 0%,100% { box-shadow: 0 0 0 0 var(--primary); } 50% { box-shadow: 0 0 0 8px transparent; } }
+@keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes shake {
+  0%,100% { transform: translateX(0); }
+  10%,30%,50%,70%,90% { transform: translateX(-4px); }
+  20%,40%,60%,80% { transform: translateX(4px); }
+}
+@keyframes flyToCart {
+  0% { transform: scale(1) translate(0, 0); opacity: 1; }
+  80% { transform: scale(0.4) translate(120px, -80px); opacity: 0.8; }
+  100% { transform: scale(0) translate(140px, -100px); opacity: 0; }
+}
+
+.animate-fade-in { animation: fadeIn 0.4s var(--ease-smooth) both; }
+.animate-fade-in-up { animation: fadeInUp 0.5s var(--ease-spring) both; }
+.animate-scale-in { animation: scaleIn 0.3s var(--ease-spring) both; }
+.animate-scale-in-bounce { animation: scaleInBounce 0.5s var(--ease-spring) both; }
+.animate-slide-in-right { animation: slideInRight 0.4s var(--ease-spring) both; }
+.animate-pulse-glow { animation: pulseGlow 2s infinite; }
+.animate-float { animation: float 4s ease-in-out infinite; }
+.animate-shake { animation: shake 0.4s ease both; }
+.animate-fly-to-cart { animation: flyToCart 0.7s var(--ease-smooth) forwards; }
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-150 { animation-delay: 0.15s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+.marquee-container { overflow: hidden; white-space: nowrap; }
+.marquee-content { display: inline-block; animation: marquee 30s linear infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

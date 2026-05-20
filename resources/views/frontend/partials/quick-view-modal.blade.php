@@ -1,0 +1,1 @@
+<div id="quick-view-modal" class="quick-view-modal hidden"><div class="quick-view-backdrop" onclick="window.closeQuickView?.()"></div><div class="quick-view-panel"><button class="quick-close" onclick="window.closeQuickView?.()">×</button><div id="quick-view-content">Loading...</div></div></div>

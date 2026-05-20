@@ -1,0 +1,42 @@
+[
+    {
+        "is_active":  true,
+        "name":  "Brand 1",
+        "slug":  "brand-1"
+    },
+    {
+        "is_active":  true,
+        "name":  "Brand 2",
+        "slug":  "brand-2"
+    },
+    {
+        "is_active":  true,
+        "name":  "Brand 3",
+        "slug":  "brand-3"
+    },
+    {
+        "is_active":  true,
+        "name":  "Brand 4",
+        "slug":  "brand-4"
+    },
+    {
+        "is_active":  true,
+        "name":  "Brand 5",
+        "slug":  "brand-5"
+    },
+    {
+        "is_active":  true,
+        "name":  "Brand 6",
+        "slug":  "brand-6"
+    },
+    {
+        "is_active":  true,
+        "name":  "Brand 7",
+        "slug":  "brand-7"
+    },
+    {
+        "is_active":  true,
+        "name":  "Brand 8",
+        "slug":  "brand-8"
+    }
+]

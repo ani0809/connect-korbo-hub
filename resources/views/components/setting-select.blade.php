@@ -1,0 +1,1 @@
+<div class="setting-field"><label>{{ $label }}</label><select name="{{ $name }}">@foreach($options ?? [] as $k=>$v)<option value="{{ is_string($k)?$k:$v }}" @selected((string)old($name,$value ?? $default)===(string)(is_string($k)?$k:$v))>{{ $v }}</option>@endforeach</select>@if($help)<p class="help-text">{{ $help }}</p>@endif</div>

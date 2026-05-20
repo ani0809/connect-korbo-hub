@@ -1,0 +1,1 @@
+<section class="product-tabs-wrap"><div class="container"><h3>{{ $section['settings']['title'] ?? 'Product Tabs' }}</h3><div class="tabs-placeholder">Description / Reviews / Additional Info</div></div></section>

@@ -1,0 +1,1 @@
+<div class="setting-field"><label>{{ $label }}</label><input type="color" name="{{ $name }}" value="{{ old($name,$value ?? $default ?? "#2563eb") }}">@if($help)<p class="help-text">{{ $help }}</p>@endif</div>

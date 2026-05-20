@@ -1,0 +1,3 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Shop Page Builder</title>@vite(['resources/css/admin/builder.css','resources/js/admin/shop-builder.js'])</head>
+<body class="builder-body"><div class="builder-topbar"><a href="{{ route('admin.dashboard') }}">? Back</a><h1>Shop Page Builder</h1><div class="actions"><button id="sb-save" class="primary">Save</button></div></div><div class="builder-main"><section class="panel canvas"><div id="shop-areas"></div></section><aside class="panel right"><h3>Settings</h3><div id="shop-settings"></div></aside></div><script>window.shopBuilderConfig=@json($config);window.csrfToken='{{ csrf_token() }}';</script></body></html>

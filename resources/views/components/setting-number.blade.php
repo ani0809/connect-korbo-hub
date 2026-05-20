@@ -1,0 +1,1 @@
+<div class="setting-field"><label>{{ $label }}</label><input type="number" min="{{ $min ?? 0 }}" max="{{ $max ?? 999999 }}" name="{{ $name }}" value="{{ old($name,$value ?? $default) }}">@if($help)<p class="help-text">{{ $help }}</p>@endif</div>

@@ -1,0 +1,1 @@
+<section class="related-products"><div class="container"><h3>{{ $section['settings']['title'] ?? 'Related Products' }}</h3><div class="prod-grid">@for($i=1;$i<=($section['settings']['count'] ?? 4);$i++)<div class="prod-item">Related {{ $i }}</div>@endfor</div></div></section>

@@ -1,0 +1,1 @@
+<div class="foot-news"><h4>{{ $settings["title"] ?? "Newsletter" }}</h4><form><input placeholder="{{ $settings["placeholder"] ?? "Email" }}"><button>{{ $settings["button_text"] ?? "Subscribe" }}</button></form></div>

@@ -1,0 +1,1 @@
+<div class="setting-field"><label>{{ $label }}</label><label class="switch"><input type="hidden" name="{{ $name }}" value="0"><input type="checkbox" name="{{ $name }}" value="1" @checked((bool)old($name,$value ?? $default))><span class="slider"></span></label>@if($help)<p class="help-text">{{ $help }}</p>@endif</div>

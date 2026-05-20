@@ -1,0 +1,372 @@
+/* Product reviews & Q&A (WoodMart-inspired) */
+.product-reviews-section,
+.product-qa-section {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #fff;
+  border: 1px solid #dee2e8;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(13, 26, 38, 0.04);
+}
+
+.reviews-header,
+.qa-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.reviews-title,
+.product-qa-section h3 {
+  font-family: var(--font-heading, system-ui);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.reviews-count,
+.qa-count {
+  color: #737b85;
+  font-weight: 500;
+}
+
+.btn-write-review,
+.btn-ask-question {
+  border: 1px solid #dee2e8;
+  background: #fff;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.btn-write-review:hover,
+.btn-ask-question:hover {
+  border-color: var(--color-primary, #187ba5);
+  color: var(--color-primary, #187ba5);
+}
+
+.rating-summary {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 768px) {
+  .rating-summary {
+    grid-template-columns: 1fr;
+  }
+}
+
+.rating-average {
+  text-align: center;
+  padding: 1rem;
+  background: #f5f7fa;
+  border-radius: 12px;
+}
+
+.avg-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: var(--font-heading, system-ui);
+  line-height: 1;
+}
+
+.avg-stars .star.filled {
+  color: #f59e0b;
+}
+.avg-stars .star.empty {
+  color: #d1d5db;
+}
+
+.avg-label {
+  font-size: 13px;
+  color: #737b85;
+  margin-top: 0.5rem;
+}
+
+.rating-bar-row {
+  display: grid;
+  grid-template-columns: 52px 1fr 36px;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 8px;
+}
+.rating-bar-row:hover {
+  background: #f9fafb;
+}
+.rating-bar-row.active {
+  background: #eaf4f8;
+}
+
+.bar-track {
+  height: 8px;
+  background: #edeff2;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background: var(--color-primary, #187ba5);
+  border-radius: 999px;
+  width: 0;
+  transition: width 0.8s ease-out;
+}
+.bar-fill.is-ready {
+  /* width set inline */
+}
+
+.clear-filter {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 13px;
+  color: #187ba5;
+}
+
+.reviews-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 13px;
+  color: #737b85;
+}
+
+.sort-select {
+  border: 1px solid #dee2e8;
+  border-radius: 10px;
+  padding: 0.35rem 0.75rem;
+  font-size: 14px;
+}
+
+.review-card {
+  border: 1px solid #eef1f6;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.review-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.reviewer-avatar img,
+.avatar-initials {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  object-fit: cover;
+}
+.avatar-initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eaf4f8;
+  color: #187ba5;
+  font-weight: 700;
+}
+
+.verified-badge {
+  margin-left: 0.35rem;
+  font-size: 11px;
+  color: #15803d;
+  background: rgba(21, 128, 61, 0.1);
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.review-stars .star.filled {
+  color: #f59e0b;
+}
+.review-stars .star.empty {
+  color: #d1d5db;
+}
+
+.review-title {
+  font-weight: 600;
+  margin: 0.75rem 0 0.35rem;
+}
+
+.review-body {
+  color: #374151;
+  line-height: 1.6;
+}
+
+.review-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+.review-image-thumb img {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #eef1f6;
+}
+
+.review-reply {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  background: #eff6ff;
+  border-radius: 10px;
+  border: 1px solid #dbeafe;
+}
+
+.reply-label {
+  font-weight: 600;
+  font-size: 13px;
+  color: #1e40af;
+}
+
+.review-helpful {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 13px;
+}
+
+.helpful-btn {
+  border: 1px solid #dee2e8;
+  background: #fff;
+  border-radius: 8px;
+  padding: 0.25rem 0.6rem;
+  cursor: pointer;
+}
+.helpful-btn.voted {
+  border-color: #187ba5;
+  color: #187ba5;
+}
+
+.no-reviews,
+.no-questions {
+  text-align: center;
+  padding: 2rem;
+  color: #737b85;
+}
+
+.write-review-section {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px dashed #dee2e8;
+}
+
+.star-input {
+  display: flex;
+  gap: 0.25rem;
+}
+.star-input-item {
+  font-size: 1.75rem;
+  color: #d1d5db;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+.star-input-item.active {
+  color: #f59e0b;
+}
+
+.rating-label-hint {
+  font-size: 13px;
+  color: #737b85;
+  margin-top: 0.25rem;
+  min-height: 1.25rem;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  border: 1px solid #dee2e8;
+  border-radius: 10px;
+  padding: 0.5rem 0.75rem;
+  font-size: 14px;
+}
+.form-textarea {
+  min-height: 120px;
+}
+
+.btn-submit-review {
+  margin-top: 1rem;
+  background: var(--color-primary, #187ba5);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.65rem 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn-submit-review:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Q&A */
+.question-item {
+  border: 1px solid #eef1f6;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.question-content {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.q-badge,
+.a-badge {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 13px;
+}
+.q-badge {
+  background: #eaf4f8;
+  color: #187ba5;
+}
+.a-badge.admin {
+  background: #dbeafe;
+  color: #1e40af;
+}
+.a-badge.seller {
+  background: #d1fae5;
+  color: #047857;
+}
+.a-badge:not(.admin):not(.seller) {
+  background: #f3f4f6;
+  color: #4b5563;
+}
+
+.answer-item {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+  padding-left: 0.5rem;
+  border-left: 2px solid #eef1f6;
+}
+
+.a-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 12px;
+  color: #737b85;
+  margin-top: 0.35rem;
+}

@@ -1,0 +1,622 @@
+[
+    {
+        "is_featured":  true,
+        "variants":  [
+                         {
+                             "price":  29.99,
+                             "stock":  50,
+                             "sku":  "SKU-1"
+                         }
+                     ],
+        "thumbnail":  "uploads/demo/product-thumb.jpg",
+        "brand_id":  1,
+        "tags":  [
+                     "demo",
+                     "featured"
+                 ],
+        "name":  "multi-vendor Product 1",
+        "type":  "variable",
+        "price":  29.99,
+        "description":  "\u003cp\u003eDemo product description.\u003c/p\u003e",
+        "slug":  "multi-vendor-product-1",
+        "images":  [
+                       {
+                           "image":  "uploads/demo/product-1.jpg"
+                       },
+                       {
+                           "image":  "uploads/demo/product-2.jpg"
+                       }
+                   ],
+        "is_published":  true,
+        "category_id":  1
+    },
+    {
+        "is_featured":  true,
+        "variants":  [
+                         {
+                             "price":  29.99,
+                             "stock":  50,
+                             "sku":  "SKU-2"
+                         }
+                     ],
+        "thumbnail":  "uploads/demo/product-thumb.jpg",
+        "brand_id":  1,
+        "tags":  [
+                     "demo",
+                     "featured"
+                 ],
+        "name":  "multi-vendor Product 2",
+        "type":  "variable",
+        "price":  29.99,
+        "description":  "\u003cp\u003eDemo product description.\u003c/p\u003e",
+        "slug":  "multi-vendor-product-2",
+        "images":  [
+                       {
+                           "image":  "uploads/demo/product-1.jpg"
+                       },
+                       {
+                           "image":  "uploads/demo/product-2.jpg"
+                       }
+                   ],
+        "is_published":  true,
+        "category_id":  1
+    },
+    {
+        "is_featured":  true,
+        "variants":  [
+                         {
+                             "price":  29.99,
+                             "stock":  50,
+                             "sku":  "SKU-3"
+                         }
+                     ],
+        "thumbnail":  "uploads/demo/product-thumb.jpg",
+        "brand_id":  1,
+        "tags":  [
+                     "demo",
+                     "featured"
+                 ],
+        "name":  "multi-vendor Product 3",
+        "type":  "variable",
+        "price":  29.99,
+        "description":  "\u003cp\u003eDemo product description.\u003c/p\u003e",
+        "slug":  "multi-vendor-product-3",
+        "images":  [
+                       {
+                           "image":  "uploads/demo/product-1.jpg"
+                       },
+                       {
+                           "image":  "uploads/demo/product-2.jpg"
+                       }
+                   ],
+        "is_published":  true,
+        "category_id":  1
+    },
+    {
+        "is_featured":  true,
+        "variants":  [
+                         {
+                             "price":  29.99,
+                             "stock":  50,
+                             "sku":  "SKU-4"
+                         }
+                     ],
+        "thumbnail":  "uploads/demo/product-thumb.jpg",
+        "brand_id":  1,
+        "tags":  [
+                     "demo",
+                     "featured"
+                 ],
+        "name":  "multi-vendor Product 4",
+        "type":  "variable",
+        "price":  29.99,
+        "description":  "\u003cp\u003eDemo product description.\u003c/p\u003e",
+        "slug":  "multi-vendor-product-4",
+        "images":  [
+                       {
+                           "image":  "uploads/demo/product-1.jpg"
+                       },
+                       {
+                           "image":  "uploads/demo/product-2.jpg"
+                       }
+                   ],
+        "is_published":  true,
+        "category_id":  1
+    },
+    {
+        "is_featured":  true,
+        "variants":  [
+                         {
+                             "price":  29.99,
+                             "stock":  50,
+                             "sku":  "SKU-5"
+                         }
+                     ],
+        "thumbnail":  "uploads/demo/product-thumb.jpg",
+        "brand_id":  1,
+        "tags":  [
+                     "demo",
+                     "featured"
+                 ],
+        "name":  "multi-vendor Product 5",
+        "type":  "variable",
+        "price":  29.99,
+        "description":  "\u003cp\u003eDemo product description.\u003c/p\u003e",
+        "slug":  "multi-vendor-product-5",
+        "images":  [
+                       {
+                           "image":  "uploads/demo/product-1.jpg"
+                       },
+                       {
+                           "image":  "uploads/demo/product-2.jpg"
+                       }
+                   ],
+        "is_published":  true,
+        "category_id":  1
+    },
+    {
+        "is_featured":  true,
+        "variants":  [
+                         {
+                             "price":  29.99,
+                             "stock":  50,
+                             "sku":  "SKU-6"
+                         }
+                     ],
+        "thumbnail":  "uploads/demo/product-thumb.jpg",
+        "brand_id":  1,
+        "tags":  [
+                     "demo",
+                     "featured"
+                 ],
+        "name":  "multi-vendor Product 6",
+        "type":  "variable",
+        "price":  29.99,
+        "description":  "\u003cp\u003eDemo product description.\u003c/p\u003e",
+        "slug":  "multi-vendor-product-6",
+        "images":  [
+                       {
+                           "image":  "uploads/demo/product-1.jpg"
+                       },
+                       {
+                           "image":  "uploads/demo/product-2.jpg"
+                       }
+                   ],
+        "is_published":  true,
+        "category_id":  1
+    },
+    {
+        "is_featured":  false,
+        "variants":  [
+                         {
+                             "price":  29.99,
+                             "stock":  50,
+                             "sku":  "SKU-7"
+                         }
+                     ],
+        "thumbnail":  "uploads/demo/product-thumb.jpg",
+        "brand_id":  1,
+        "tags":  [
+                     "demo",
+                     "featured"
+                 ],
+        "name":  "multi-vendor Product 7",
+        "type":  "variable",
+        "price":  29.99,
+        "description":  "\u003cp\u003eDemo product description.\u003c/p\u003e",
+        "slug":  "multi-vendor-product-7",
+        "images":  [
+                       {
+                           "image":  "uploads/demo/product-1.jpg"
+                       },
+                       {
+                           "image":  "uploads/demo/product-2.jpg"
+                       }
+                   ],
+        "is_published":  true,
+        "category_id":  1
+    },
+    {
+        "is_featured":  false,
+        "variants":  [
+                         {
+                             "price":  29.99,
+                             "stock":  50,
+                             "sku":  "SKU-8"
+                         }
+                     ],
+        "thumbnail":  "uploads/demo/product-thumb.jpg",
+        "brand_id":  1,
+        "tags":  [
+                     "demo",
+                     "featured"
+                 ],
+        "name":  "multi-vendor Product 8",
+        "type":  "variable",
+        "price":  29.99,
+        "description":  "\u003cp\u003eDemo product description.\u003c/p\u003e",
+        "slug":  "multi-vendor-product-8",
+        "images":  [
+                       {
+                           "image":  "uploads/demo/product-1.jpg"
+                       },
+                       {
+                           "image":  "uploads/demo/product-2.jpg"
+                       }
+                   ],
+        "is_published":  true,
+        "category_id":  1
+    },
+    {
+        "is_featured":  false,
+        "variants":  [
+                         {
+                             "price":  29.99,
+                             "stock":  50,
+                             "sku":  "SKU-9"
+                         }
+                     ],
+        "thumbnail":  "uploads/demo/product-thumb.jpg",
+        "brand_id":  1,
+        "tags":  [
+                     "demo",
+                     "featured"
+                 ],
+        "name":  "multi-vendor Product 9",
+        "type":  "variable",
+        "price":  29.99,
+        "description":  "\u003cp\u003eDemo product description.\u003c/p\u003e",
+        "slug":  "multi-vendor-product-9",
+        "images":  [
+                       {
+                           "image":  "uploads/demo/product-1.jpg"
+                       },
+                       {
+                           "image":  "uploads/demo/product-2.jpg"
+                       }
+                   ],
+        "is_published":  true,
+        "category_id":  1
+    },
+    {
+        "is_featured":  false,
+        "variants":  [
+                         {
+                             "price":  29.99,
+                             "stock":  50,
+                             "sku":  "SKU-10"
+                         }
+                     ],
+        "thumbnail":  "uploads/demo/product-thumb.jpg",
+        "brand_id":  1,
+        "tags":  [
+                     "demo",
+                     "featured"
+                 ],
+        "name":  "multi-vendor Product 10",
+        "type":  "variable",
+        "price":  29.99,
+        "description":  "\u003cp\u003eDemo product description.\u003c/p\u003e",
+        "slug":  "multi-vendor-product-10",
+        "images":  [
+                       {
+                           "image":  "uploads/demo/product-1.jpg"
+                       },
+                       {
+                           "image":  "uploads/demo/product-2.jpg"
+                       }
+                   ],
+        "is_published":  true,
+        "category_id":  1
+    },
+    {
+        "is_featured":  false,
+        "variants":  [
+                         {
+                             "price":  29.99,
+                             "stock":  50,
+                             "sku":  "SKU-11"
+                         }
+                     ],
+        "thumbnail":  "uploads/demo/product-thumb.jpg",
+        "brand_id":  1,
+        "tags":  [
+                     "demo",
+                     "featured"
+                 ],
+        "name":  "multi-vendor Product 11",
+        "type":  "variable",
+        "price":  29.99,
+        "description":  "\u003cp\u003eDemo product description.\u003c/p\u003e",
+        "slug":  "multi-vendor-product-11",
+        "images":  [
+                       {
+                           "image":  "uploads/demo/product-1.jpg"
+                       },
+                       {
+                           "image":  "uploads/demo/product-2.jpg"
+                       }
+                   ],
+        "is_published":  true,
+        "category_id":  1
+    },
+    {
+        "is_featured":  false,
+        "variants":  [
+                         {
+                             "price":  29.99,
+                             "stock":  50,
+                             "sku":  "SKU-12"
+                         }
+                     ],
+        "thumbnail":  "uploads/demo/product-thumb.jpg",
+        "brand_id":  1,
+        "tags":  [
+                     "demo",
+                     "featured"
+                 ],
+        "name":  "multi-vendor Product 12",
+        "type":  "variable",
+        "price":  29.99,
+        "description":  "\u003cp\u003eDemo product description.\u003c/p\u003e",
+        "slug":  "multi-vendor-product-12",
+        "images":  [
+                       {
+                           "image":  "uploads/demo/product-1.jpg"
+                       },
+                       {
+                           "image":  "uploads/demo/product-2.jpg"
+                       }
+                   ],
+        "is_published":  true,
+        "category_id":  1
+    },
+    {
+        "is_featured":  false,
+        "variants":  [
+                         {
+                             "price":  29.99,
+                             "stock":  50,
+                             "sku":  "SKU-13"
+                         }
+                     ],
+        "thumbnail":  "uploads/demo/product-thumb.jpg",
+        "brand_id":  1,
+        "tags":  [
+                     "demo",
+                     "featured"
+                 ],
+        "name":  "multi-vendor Product 13",
+        "type":  "variable",
+        "price":  29.99,
+        "description":  "\u003cp\u003eDemo product description.\u003c/p\u003e",
+        "slug":  "multi-vendor-product-13",
+        "images":  [
+                       {
+                           "image":  "uploads/demo/product-1.jpg"
+                       },
+                       {
+                           "image":  "uploads/demo/product-2.jpg"
+                       }
+                   ],
+        "is_published":  true,
+        "category_id":  1
+    },
+    {
+        "is_featured":  false,
+        "variants":  [
+                         {
+                             "price":  29.99,
+                             "stock":  50,
+                             "sku":  "SKU-14"
+                         }
+                     ],
+        "thumbnail":  "uploads/demo/product-thumb.jpg",
+        "brand_id":  1,
+        "tags":  [
+                     "demo",
+                     "featured"
+                 ],
+        "name":  "multi-vendor Product 14",
+        "type":  "variable",
+        "price":  29.99,
+        "description":  "\u003cp\u003eDemo product description.\u003c/p\u003e",
+        "slug":  "multi-vendor-product-14",
+        "images":  [
+                       {
+                           "image":  "uploads/demo/product-1.jpg"
+                       },
+                       {
+                           "image":  "uploads/demo/product-2.jpg"
+                       }
+                   ],
+        "is_published":  true,
+        "category_id":  1
+    },
+    {
+        "is_featured":  false,
+        "variants":  [
+                         {
+                             "price":  29.99,
+                             "stock":  50,
+                             "sku":  "SKU-15"
+                         }
+                     ],
+        "thumbnail":  "uploads/demo/product-thumb.jpg",
+        "brand_id":  1,
+        "tags":  [
+                     "demo",
+                     "featured"
+                 ],
+        "name":  "multi-vendor Product 15",
+        "type":  "variable",
+        "price":  29.99,
+        "description":  "\u003cp\u003eDemo product description.\u003c/p\u003e",
+        "slug":  "multi-vendor-product-15",
+        "images":  [
+                       {
+                           "image":  "uploads/demo/product-1.jpg"
+                       },
+                       {
+                           "image":  "uploads/demo/product-2.jpg"
+                       }
+                   ],
+        "is_published":  true,
+        "category_id":  1
+    },
+    {
+        "is_featured":  false,
+        "variants":  [
+                         {
+                             "price":  29.99,
+                             "stock":  50,
+                             "sku":  "SKU-16"
+                         }
+                     ],
+        "thumbnail":  "uploads/demo/product-thumb.jpg",
+        "brand_id":  1,
+        "tags":  [
+                     "demo",
+                     "featured"
+                 ],
+        "name":  "multi-vendor Product 16",
+        "type":  "variable",
+        "price":  29.99,
+        "description":  "\u003cp\u003eDemo product description.\u003c/p\u003e",
+        "slug":  "multi-vendor-product-16",
+        "images":  [
+                       {
+                           "image":  "uploads/demo/product-1.jpg"
+                       },
+                       {
+                           "image":  "uploads/demo/product-2.jpg"
+                       }
+                   ],
+        "is_published":  true,
+        "category_id":  1
+    },
+    {
+        "is_featured":  false,
+        "variants":  [
+                         {
+                             "price":  29.99,
+                             "stock":  50,
+                             "sku":  "SKU-17"
+                         }
+                     ],
+        "thumbnail":  "uploads/demo/product-thumb.jpg",
+        "brand_id":  1,
+        "tags":  [
+                     "demo",
+                     "featured"
+                 ],
+        "name":  "multi-vendor Product 17",
+        "type":  "variable",
+        "price":  29.99,
+        "description":  "\u003cp\u003eDemo product description.\u003c/p\u003e",
+        "slug":  "multi-vendor-product-17",
+        "images":  [
+                       {
+                           "image":  "uploads/demo/product-1.jpg"
+                       },
+                       {
+                           "image":  "uploads/demo/product-2.jpg"
+                       }
+                   ],
+        "is_published":  true,
+        "category_id":  1
+    },
+    {
+        "is_featured":  false,
+        "variants":  [
+                         {
+                             "price":  29.99,
+                             "stock":  50,
+                             "sku":  "SKU-18"
+                         }
+                     ],
+        "thumbnail":  "uploads/demo/product-thumb.jpg",
+        "brand_id":  1,
+        "tags":  [
+                     "demo",
+                     "featured"
+                 ],
+        "name":  "multi-vendor Product 18",
+        "type":  "variable",
+        "price":  29.99,
+        "description":  "\u003cp\u003eDemo product description.\u003c/p\u003e",
+        "slug":  "multi-vendor-product-18",
+        "images":  [
+                       {
+                           "image":  "uploads/demo/product-1.jpg"
+                       },
+                       {
+                           "image":  "uploads/demo/product-2.jpg"
+                       }
+                   ],
+        "is_published":  true,
+        "category_id":  1
+    },
+    {
+        "is_featured":  false,
+        "variants":  [
+                         {
+                             "price":  29.99,
+                             "stock":  50,
+                             "sku":  "SKU-19"
+                         }
+                     ],
+        "thumbnail":  "uploads/demo/product-thumb.jpg",
+        "brand_id":  1,
+        "tags":  [
+                     "demo",
+                     "featured"
+                 ],
+        "name":  "multi-vendor Product 19",
+        "type":  "variable",
+        "price":  29.99,
+        "description":  "\u003cp\u003eDemo product description.\u003c/p\u003e",
+        "slug":  "multi-vendor-product-19",
+        "images":  [
+                       {
+                           "image":  "uploads/demo/product-1.jpg"
+                       },
+                       {
+                           "image":  "uploads/demo/product-2.jpg"
+                       }
+                   ],
+        "is_published":  true,
+        "category_id":  1
+    },
+    {
+        "is_featured":  false,
+        "variants":  [
+                         {
+                             "price":  29.99,
+                             "stock":  50,
+                             "sku":  "SKU-20"
+                         }
+                     ],
+        "thumbnail":  "uploads/demo/product-thumb.jpg",
+        "brand_id":  1,
+        "tags":  [
+                     "demo",
+                     "featured"
+                 ],
+        "name":  "multi-vendor Product 20",
+        "type":  "variable",
+        "price":  29.99,
+        "description":  "\u003cp\u003eDemo product description.\u003c/p\u003e",
+        "slug":  "multi-vendor-product-20",
+        "images":  [
+                       {
+                           "image":  "uploads/demo/product-1.jpg"
+                       },
+                       {
+                           "image":  "uploads/demo/product-2.jpg"
+                       }
+                   ],
+        "is_published":  true,
+        "category_id":  1
+    }
+]

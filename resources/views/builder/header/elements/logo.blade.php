@@ -1,0 +1,1 @@
+<a href="{{ $settings["link"] ?? "/" }}" class="el-logo" style="max-width:{{ $settings["max_width"] ?? "160px" }}">@if(!empty($settings["text_logo"]))<span>{{ $settings["text_logo"] }}</span>@else<img src="{{ asset("storage/".(setting("site_logo","") ?: "")) }}" alt="logo">@endif</a>

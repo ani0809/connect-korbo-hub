@@ -1,0 +1,3 @@
+<?php
+use Illuminate\Database\Migrations\Migration; use Illuminate\Database\Schema\Blueprint; use Illuminate\Support\Facades\Schema;
+return new class extends Migration { public function up(): void { Schema::create('update_releases', function (Blueprint $t): void { $t->id(); $t->foreignId('product_id')->constrained('products')->cascadeOnDelete(); $t->string('version',20); $t->string('min_php',10)->default('8.2'); $t->string('min_plan')->nullable(); $t->longText('changelog'); $t->string('zip_path'); $t->boolean('is_published')->default(false); $t->timestamp('published_at')->nullable(); $t->integer('download_count')->default(0); $t->timestamps(); }); } public function down(): void { Schema::dropIfExists('update_releases'); } };

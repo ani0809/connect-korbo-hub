@@ -1,0 +1,1 @@
+<div class="setting-field" x-data="{v: {{ (int)($value ?? $default ?? 0) }}}"><label>{{ $label }} <span x-text="v"></span></label><input type="range" min="{{ $min ?? 0 }}" max="{{ $max ?? 100 }}" x-model="v" name="{{ $name }}" value="{{ old($name,$value ?? $default) }}">@if($help)<p class="help-text">{{ $help }}</p>@endif</div>

@@ -1,0 +1,12 @@
+.dark body{background:#0b1220;color:#e5e7eb}
+.dark .bg-white{background:#111827 !important}
+.dark .text-gray-600,.dark .text-gray-500,.dark .text-slate-500{color:#9ca3af !important}
+.dark .border{border-color:#374151 !important}
+.dark .toast{background:#1f2937}
+.dark .compare-bar{background:#111827;color:#e5e7eb}
+.dark .cookie-banner{background:#020617}
+.dark .lightbox-overlay{background:rgba(0,0,0,.92)}
+.dark .scroll-to-top{background:#1f2937}
+.dark .search-modal,.dark .mobile-menu-drawer,.dark .mega-pop,.dark .mega-wide{background:#0f172a;color:#e5e7eb;border-color:#334155}
+.dark .nav-link,.dark .mega-link{color:#cbd5e1}
+.dark .ui-icon-btn{background:#111827;border-color:#334155;color:#e5e7eb}

@@ -1,0 +1,1 @@
+<div class="foot-links"><h4>{{ $settings["title"] ?? "Links" }}</h4><ul>@foreach(($settings["links"] ?? []) as $l)<li><a href="{{ $l["url"] ?? "#" }}">{{ $l["label"] ?? "Link" }}</a></li>@endforeach</ul></div>

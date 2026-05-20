@@ -1,0 +1,1 @@
+<div class="setting-field"><label>{{ $label }}</label><div class="radio-cards">@foreach($options ?? [] as $k=>$v)<label><input type="radio" name="{{ $name }}" value="{{ is_string($k)?$k:$v }}" @checked((string)old($name,$value ?? $default)===(string)(is_string($k)?$k:$v))><span>{{ $v }}</span></label>@endforeach</div>@if($help)<p class="help-text">{{ $help }}</p>@endif</div>

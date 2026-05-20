@@ -1,0 +1,6 @@
+<?php
+namespace App\Models;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+class OrderItem extends Model { protected $fillable=['order_id','seller_id','product_id','product_variant_id','product_name','variant_info','thumbnail','quantity','unit_price','discount_amount','tax_amount','subtotal','commission_rate','commission_amount','seller_earning','shipping_cost','item_status','is_reviewed','is_digital','download_limit','download_count']; protected $casts=['variant_info'=>'array','is_reviewed'=>'boolean','is_digital'=>'boolean','unit_price'=>'decimal:2','discount_amount'=>'decimal:2','tax_amount'=>'decimal:2','subtotal'=>'decimal:2','commission_rate'=>'decimal:2','commission_amount'=>'decimal:2','seller_earning'=>'decimal:2','shipping_cost'=>'decimal:2']; public function order(): BelongsTo { return $this->belongsTo(Order::class);} public function seller(): BelongsTo { return $this->belongsTo(Seller::class);} public function product(): BelongsTo { return $this->belongsTo(Product::class);} public function variant(): BelongsTo { return $this->belongsTo(ProductVariant::class,'product_variant_id');} public function statuses(): HasMany { return $this->hasMany(OrderStatusHistory::class);} }

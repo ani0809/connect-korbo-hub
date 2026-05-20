@@ -1,0 +1,21 @@
+@import '../frontend/tokens.css';
+@import '../frontend/design-handoff-v2.css';
+@import './design-system.css';
+@import './ui-modern-admin.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Sidebar Zenith overrides live in `design-handoff-admin.css` and are loaded via @vite
+   *after* this file so rules win the cascade — @import cannot follow @tailwind in Vite. */
+
+@layer components {
+    .cc-brand-lockup {
+        letter-spacing: -0.012em;
+    }
+
+    .cc-brand-wordmark {
+        font-weight: 700;
+    }
+}

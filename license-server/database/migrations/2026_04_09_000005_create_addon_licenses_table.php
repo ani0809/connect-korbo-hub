@@ -1,0 +1,3 @@
+<?php
+use Illuminate\Database\Migrations\Migration; use Illuminate\Database\Schema\Blueprint; use Illuminate\Support\Facades\Schema;
+return new class extends Migration { public function up(): void { Schema::create('addon_licenses', function (Blueprint $t): void { $t->id(); $t->string('addon_license_key',50)->unique(); $t->foreignId('parent_license_id')->constrained('licenses')->cascadeOnDelete(); $t->string('addon_slug',100); $t->string('addon_name'); $t->timestamp('expires_at')->nullable(); $t->boolean('is_lifetime')->default(false); $t->enum('status',['active','suspended','expired'])->default('active'); $t->string('domain')->nullable(); $t->timestamps(); }); } public function down(): void { Schema::dropIfExists('addon_licenses'); } };

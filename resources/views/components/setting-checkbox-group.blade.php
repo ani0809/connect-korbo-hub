@@ -1,0 +1,1 @@
+<div class="setting-field"><label>{{ $label }}</label><div>@foreach($options ?? [] as $k=>$v)<label><input type="checkbox" name="{{ $name }}[]" value="{{ is_string($k)?$k:$v }}" @checked(in_array((string)(is_string($k)?$k:$v), (array)old($name,$value ?? $default ?? []), true))> {{ $v }}</label>@endforeach</div>@if($help)<p class="help-text">{{ $help }}</p>@endif</div>

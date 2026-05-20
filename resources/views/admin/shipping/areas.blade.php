@@ -1,0 +1,5 @@
+@extends('admin.layouts.app')
+@section('title','Shipping Areas')
+@section('content')
+<div class="space-y-4"><div class="bg-white border rounded-xl p-4"><h3 class="panel-title">Area-wise Shipping</h3><p class="text-sm text-gray-600">Country > State > City > Area fallback supported.</p><div class="mt-3"><label class="text-sm">Bulk Import CSV</label><input type="file" class="block mt-1"><button class="mt-2 btn-secondary">Download Template</button></div></div><div class="bg-white border rounded-xl overflow-x-auto"><table class="w-full text-sm"><thead><tr class="border-b text-left"><th class="p-3">Country</th><th>State</th><th>City</th><th>Area</th><th>Cost</th><th>Status</th></tr></thead><tbody>@foreach($areas as $a)<tr class="border-b"><td class="p-3"><strong>{{ $a->country }}</strong></td><td>{{ $a->state }}</td><td>{{ $a->city }}</td><td>{{ $a->area }}</td><td>{{ currency_format((float)$a->shipping_cost) }}</td><td><span class="status-badge {{ $a->is_active ? 'status-active' : 'status-draft' }}">{{ $a->is_active ? 'active' : 'inactive' }}</span></td></tr>@endforeach</tbody></table></div>{{ $areas->links() }}</div>
+@endsection

@@ -1,0 +1,1 @@
+<div class="el-cart" x-data="{open:false,count:0}"><a href="/cart" @click.prevent="open=!open">??<span class="badge" x-text="count"></span></a><div class="mini-cart" x-show="open">Mini cart</div></div>

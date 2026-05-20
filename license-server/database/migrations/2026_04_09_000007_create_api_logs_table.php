@@ -1,0 +1,3 @@
+<?php
+use Illuminate\Database\Migrations\Migration; use Illuminate\Database\Schema\Blueprint; use Illuminate\Support\Facades\Schema;
+return new class extends Migration { public function up(): void { Schema::create('api_logs', function (Blueprint $t): void { $t->id(); $t->string('endpoint'); $t->string('license_key')->nullable(); $t->string('domain')->nullable(); $t->json('request_data')->nullable(); $t->json('response_data')->nullable(); $t->string('ip_address',45)->nullable(); $t->integer('response_code'); $t->timestamp('created_at')->useCurrent(); $t->index('created_at','api_logs_created_at_idx'); }); } public function down(): void { Schema::dropIfExists('api_logs'); } };

@@ -1,0 +1,1 @@
+<div class="p-gallery"><div class="main"><img src="{{ $product->thumbnail_url }}" alt="{{ $product->name }}"></div><div class="thumbs">@foreach($product->images as $img)<img src="{{ asset("storage/".$img->image) }}" alt="img">@endforeach</div></div>

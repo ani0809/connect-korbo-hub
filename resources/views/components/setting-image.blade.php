@@ -1,0 +1,1 @@
+<div class="setting-field"><label>{{ $label }}</label>@if(!empty($value))<img src="{{ asset("storage/".$value) }}" class="preview">@endif<input type="file" name="{{ $name }}">@if($help)<p class="help-text">{{ $help }}</p>@endif</div>

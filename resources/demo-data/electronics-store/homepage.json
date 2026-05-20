@@ -1,0 +1,19 @@
+[
+    {
+        "settings":  {
+                         "autoplay":  true,
+                         "title":  "Welcome"
+                     },
+        "id":  "sec_hero",
+        "type":  "hero-slider",
+        "enabled":  true
+    },
+    {
+        "settings":  {
+                         "title":  "Featured"
+                     },
+        "id":  "sec_products",
+        "type":  "featured-products",
+        "enabled":  true
+    }
+]

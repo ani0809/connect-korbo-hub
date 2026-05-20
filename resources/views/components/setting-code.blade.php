@@ -1,0 +1,1 @@
+<div class="setting-field"><label>{{ $label }}</label><textarea class="code-field" name="{{ $name }}">{{ old($name,$value ?? $default) }}</textarea>@if($help)<p class="help-text">{{ $help }}</p>@endif</div>

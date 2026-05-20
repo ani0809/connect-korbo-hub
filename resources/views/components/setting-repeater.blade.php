@@ -1,0 +1,1 @@
+<div class="setting-field"><label>{{ $label }}</label><textarea name="{{ $name }}" placeholder="JSON array">{{ old($name, is_array($value ?? null)?json_encode($value,JSON_PRETTY_PRINT):($value ?? "[]")) }}</textarea><p class="help-text">Use JSON array of objects.</p></div>

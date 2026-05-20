@@ -1,0 +1,13 @@
+@extends('admin.layouts.app')
+@section('title','Addons')
+@section('content')
+<div class="space-y-4" x-data="addonManager()">
+  <div class="flex justify-end gap-2"><button class="btn-secondary" @click="showLicense=true">Install via License Key</button><button class="btn-secondary" @click="showUpload=true">Upload Zip File</button></div>
+
+  <div class="bg-white border rounded-xl p-4"><h2 class="panel-title">Installed Addons</h2><div class="grid grid-cols-3 gap-4">@foreach($addonFolders as $slug=>$addon)<div class="border rounded-xl p-3"><div class="font-semibold">{{ $addon['name'] ?? $slug }} <span class="text-xs text-gray-500">v{{ $addon['version'] ?? '1.0.0' }}</span></div><div class="text-sm text-gray-600 mt-1">{{ $addon['description'] ?? '' }}</div><div class="text-xs text-gray-500 mt-1">By: {{ $addon['author'] ?? 'Unknown' }}</div><hr class="my-2"><div class="text-sm">{!! ($addon['active'] ?? false) ? '<span class="status-badge status-active">Active</span>' : '<span class="status-badge status-draft">Inactive</span>' !!}</div><div class="mt-2 flex gap-2">@if($addon['installed'] ?? false)<button class="btn-secondary" @click="toggleAddon('{{ $slug }}', {{ ($addon['active'] ?? false) ? 'true' : 'false' }})">{{ ($addon['active'] ?? false) ? 'Deactivate' : 'Activate' }}</button><button class="btn-secondary" @click="uninstallAddon('{{ $slug }}')">Uninstall</button>@else<button class="btn-secondary" @click="prefillSlug('{{ $slug }}')">Install</button>@endif</div></div>@endforeach</div></div>
+
+  <div x-show="showLicense" class="fixed inset-0 bg-black/40 grid place-items-center"><div class="bg-white rounded-xl p-4 w-full max-w-md"><h3 class="font-semibold mb-3">Install New Addon</h3><input x-model="form.slug" class="w-full border rounded px-2 py-2 mb-2" placeholder="Addon slug"><input x-model="form.key" class="w-full border rounded px-2 py-2 mb-2" placeholder="License key"><button class="w-full btn-primary" @click="installLicense">Verify & Install</button><button class="w-full mt-2 btn-secondary" @click="showLicense=false">Close</button><div class="text-sm mt-2" x-text="progress"></div></div></div>
+  <div x-show="showUpload" class="fixed inset-0 bg-black/40 grid place-items-center"><div class="bg-white rounded-xl p-4 w-full max-w-md"><h3 class="font-semibold mb-3">Upload Addon Zip</h3><input id="zip-file" type="file" class="w-full border rounded px-2 py-2 mb-2"><button class="w-full btn-primary" @click="uploadInstall">Upload & Install</button><button class="w-full mt-2 btn-secondary" @click="showUpload=false">Close</button><div class="text-sm mt-2" x-text="progress"></div></div></div>
+</div>
+@vite('resources/js/admin/addon-manager.js')
+@endsection

@@ -1,0 +1,1 @@
+<a class="el-cta" href="{{ $settings["url"] ?? "/" }}" style="background:{{ $settings["background"] ?? "#2563eb" }};color:{{ $settings["text_color"] ?? "#fff" }}">{{ $settings["text"] ?? "Button" }}</a>

@@ -1,0 +1,8 @@
+@extends('admin.layouts.app')
+@section('title','Newsletter')
+@section('content')
+<div class="space-y-4">
+  <div class="bg-white border rounded-xl p-4 flex items-center justify-between"><div><div class="text-sm text-gray-500">Total Subscribers</div><div class="text-2xl font-bold">{{ $subscriberCount }}</div></div><a class="btn-primary" href="{{ route('admin.newsletter.create') }}">+ New Campaign</a></div>
+  <div class="bg-white border rounded-xl p-4 overflow-x-auto"><table class="w-full text-sm"><thead><tr><th class="text-left">Subject</th><th>Recipients</th><th>Status</th><th>Sent</th><th>Date</th><th></th></tr></thead><tbody>@foreach($campaigns as $c)<tr class="border-t"><td class="py-2"><strong>{{ $c->subject }}</strong></td><td class="text-center">{{ ucfirst($c->recipients) }}</td><td class="text-center"><span class="status-badge {{ $c->status === 'sent' ? 'status-delivered' : ($c->status === 'failed' ? 'status-cancelled' : 'status-pending') }}">{{ ucfirst($c->status) }}</span></td><td class="text-center">{{ $c->sent_count }}</td><td class="text-center">@datetime($c->created_at)</td><td class="text-right flex items-center justify-end gap-1"><form method="POST" action="{{ route('admin.newsletter.send',$c->id) }}">@csrf<button class="btn-secondary">Send</button></form>@if($c->status==='failed')<form method="POST" action="{{ route('admin.newsletter.retry',$c->id) }}">@csrf<button class="btn-secondary">Retry</button></form>@endif @if(in_array($c->status,['draft','scheduled','sending']))<form method="POST" action="{{ route('admin.newsletter.cancel',$c->id) }}">@csrf<button class="btn-secondary text-red-600">Cancel</button></form>@endif</td></tr>@endforeach</tbody></table><div class="mt-4">{{ $campaigns->links() }}</div></div>
+</div>
+@endsection
