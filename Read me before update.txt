@@ -1,0 +1,11 @@
+Hello,
+
+If you are already using Cibato Commerce, please follow the instructions below.
+
+-- Back up your database from phpMyAdmin or your preferred database tool.
+-- After updating, make sure all add-ons are updated.
+
+If you run into any issue after an update, contact us via the support center.
+https://support.cibato.com
+
+Thank you

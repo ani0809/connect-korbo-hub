@@ -1,0 +1,29 @@
+{
+    "name": "cibato-packages/color-code-converter",
+    "description": "HEX code converted to RGB color code",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Shifat Hossain",
+            "email": "amithassan3229@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3|^8.0",
+        "illuminate/support": "*"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "CibatoPackages\\ColorCodeConverter\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "CibatoPackages\\ColorCodeConverter\\Providers\\ColorCodeConverterProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev"
+}

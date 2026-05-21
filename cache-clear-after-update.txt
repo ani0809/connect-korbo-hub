@@ -1,0 +1,9 @@
+Run these commands after uploading the update:
+
+1) php artisan optimize:clear
+2) php artisan cache:clear
+3) php artisan view:clear
+4) php artisan config:clear
+5) php artisan route:clear
+
+If OPcache is enabled in hosting, restart PHP-FPM or use hosting panel "Flush PHP Opcache".

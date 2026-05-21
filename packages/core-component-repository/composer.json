@@ -1,0 +1,30 @@
+{
+    "name": "cibato/core-component-repository",
+    "description": "Cibato fork: lightweight shop/addon activation hooks (replaces upstream vendor refs).",
+    "keywords": ["cibato", "laravel", "license"],
+    "license": "MIT",
+    "type": "library",
+    "version": "1.0.0",
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "MehediIitdu\\CoreComponentRepository\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MehediIitdu\\CoreComponentRepository\\CoreComponentRepositoryServiceProvider"
+            ],
+            "aliases": {
+                "CoreComponentRepository": "MehediIitdu\\CoreComponentRepository\\CoreComponentRepositoryFacade"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
